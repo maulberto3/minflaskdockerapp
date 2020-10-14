@@ -1,8 +1,8 @@
 # minimal-flask-docker
 
-docker build -t flaskimage
+docker build -t minimal_flask_docker_img .
 
-docker run -it --name flaskcontainer --rm -p 8000:5000 flaskimage
+docker run -it --name minimal_flask_docker_cont --rm -p 5000:80 minimal_flask_docker_img
 
 then run
 `python post.py`

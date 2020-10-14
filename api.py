@@ -4,6 +4,10 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
+@app.route('/')
+def hi():
+    return jsonify('Hey!')
+
 @app.route('/predict',methods=['POST'])
 def predict():
     payload = request.get_json(force=True)
